@@ -4,6 +4,7 @@
 
 ## Video Walkthrough
 **Built With:** react, google maps api ...
+
 **Features:** Real-time Database Feed, AI Chatbot, Sentiment Analysis for filtering negative comments
 
 The recording below showcases what we were able to accomplish in ~2 days at HackNYU:
