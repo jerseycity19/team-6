@@ -62,7 +62,12 @@ while(flag==True):
         else:
             if(greeting(user_response)!=None):
                 print("Are you in need of immediate help?"+greeting(user_response))
-            
+            else:
+                if(user_response=='yes' or user_response=='ya' ):
+                    print("Are you inquiring about yourself?")
+                    user_response = input()
+                   
+
     else:
         flag=False
         print("ROBO: Bye! take care..")    
