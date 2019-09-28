@@ -22,6 +22,23 @@ def greeting(sentence):
         if word.lower() in GREETING_INPUTS:
             return random.choice(GREETING_RESPONSES)
 
-        
 
+##commit 2
+
+# Generating response
+#def response(user_response):
+    #robo_response=''
+
+
+#switch function
+def switch(user_response):
+    print("user response: ", user_response)
+    switcher = {
+        "1": "addiction link",
+        "2": "prevention link",
+        "3": "treatment link",
+        "4": "recovery link",
+    }
+    print(switcher[user_response])
+   
 
