@@ -1,6 +1,6 @@
 # *Team-6-ShatterProof*
 
-**Description:** An web app that ...
+**Description:** This community-driven web app helps Shatterproof to *break the stigma* and battle the addiction crisis by providing a platform for the general public to engage in activism and raise funds.
 
 ## Tech Stack
 **Front-end**
@@ -8,6 +8,7 @@
   - HTML/CSS
 - React
   - Javascript
+- Python
 
 **Back-end**
 - Mapbox and LeafletJS API
