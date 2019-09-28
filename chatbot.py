@@ -69,10 +69,11 @@ while(flag==True):
                             print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
                             user_response = input()
                             switch(user_response)
-                            print("Do you want to continue:")
-                            repeat = input()
-                        print("left loop")
-                        flag=False
+                            print("Do you want to continue inquiring (1,2,3,4)?:")
+                            inquire = input()
+                            if (inquire=="no"):
+                                print("Would you like attend an event?")
+                            flag=False
 
 
     else:
