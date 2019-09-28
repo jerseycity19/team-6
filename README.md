@@ -19,10 +19,6 @@
 - Personal algorithm for Chatbot
 
 ## Video Walkthrough
-**Built With:** react, google maps api ...
-
-**Features:** Real-time Database Feed, Chatbot
-
 The recording below showcases a demo of the web app:
 > ![GIF Recording](ui-demo.gif)
 
@@ -55,3 +51,11 @@ The recording below showcases a demo of the web app:
 - Maps API should link to Firebase
 - Utilize Firebase file storage for different types of media (images, videos)
 - Further Social Media Integration
+
+## Team Members
+- Armaan Hossain
+- Matthew Rodriguez
+- Peter Raczkowski
+- Cyrus Khorram
+- Edden Kashi
+- Chesney Boag
