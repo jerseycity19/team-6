@@ -2,6 +2,21 @@
 
 **Description:** An web app that ...
 
+## Tech Stack
+**Front-end**
+- Bootstrap
+  - HTML/CSS
+- React
+  - Javascript
+  
+**Back-end**
+- Google Maps API
+- GoFundMe API
+- Firebase
+- IBM Watson APIs?
+  - Sentiment Analysis
+- TensorflowJS
+
 ## Video Walkthrough
 **Built With:** react, google maps api ...
 
