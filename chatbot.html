@@ -1,36 +1,98 @@
-<html>
-    <head>
-        <script>
-            know = {
-                //"Hello" : "Hi! Are you in need of immediate help? (yes/no)",
-                "yes" : "Are you inquiring about yourself? (yeah/nah)",
-                "no" : "Bye! take care..",
-                "yeah" : "Choose options 1. Addiction, 2. Prevention, 3. Treatment, 4. Recovery, or more",
-                "more" : "Would you like to see testimonials, events or ambassador?",
-                "1" : '<a href="http://www.shatterproof.org/about-addiction">Addiction</a>',
-                "2" : '<a href="http://www.shatterproof.org/prevention">Prevention</a>',
-                "3" : '<a href="http://www.shatterproof.org/treatment">Treatment</a>',
-                "4" : '<a href="http://www.shatterproof.org/recovery">Recovery</a>',
-                "ambassador" : '<a href="https://www.shatterproof.org/community/become-an-ambassador">Ambassador</a>',
-                "testimonials" : "testimonial link (from cyrus)",
-                "events" : "events link (from peter)",
-                "event" : "events link (from peter)",
-                "testimonial" : "testimonial link (from cyrus)"
-            };
+<div id="chat">
+    <div class="chat_header">SHATTERPROOF</div>
+    <div id="chat_s"></div>
+    <script type="text/javascript">
+        var submitted = false;
+        </script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){add()}"></iframe>
+    <html>
+        <head>
+            <link rel="stylesheet" type="text/css" href="design.css" media="screen" />
+            <script>
+                var qn = 1;
+                know = {
+                    //"Hello" : "Hi! Are you in need of immediate help? (yes/no)",
+                    "yes" : {
+                        "1" : "Are you inquiring about yourself? (yes/no)",
+                        "2" : "Choose options 1 (Addiction), 2 (Prevention), 3 (Treatment), 4 (Recovery), or 5 (more)"
+                    },
+                    "no" : {
+                        "1" : "Bye! take care..",
+                        "2" : '<a href="http://www.shatterproof.org/about">Resources</a>',
+                    },
+                    "5" : "Would you like to see testimonials, events, ambassador, or donations?",
+                    "1" : '<a href="http://www.shatterproof.org/about-addiction">Addiction</a>',
+                    "2" : '<a href="http://www.shatterproof.org/prevention">Prevention</a>',
+                    "3" : '<a href="http://www.shatterproof.org/treatment">Treatment</a>',
+                    "4" : '<a href="http://www.shatterproof.org/recovery">Recovery</a>',
+                    "ambassador" : '<a href="https://www.shatterproof.org/community/become-an-ambassador">Ambassador</a>',
+                    "testimonials" : "testimonial link (from cyrus)",
+                    "events" : "events link (from peter)",
+                    "event" : "events link (from peter)",
+                    "testimonial" : "testimonial link (from cyrus)",
+                    "donate" : '<a href="https://connect.clickandpledge.com/w/Form/4e21c330-0011-430e-a2c0-5400c4ba45d5">Donation</a>',
+                    "donations" : '<a href="https://connect.clickandpledge.com/w/Form/4e21c330-0011-430e-a2c0-5400c4ba45d5">Donation</a>',
+                };
             function talk() {
                 var user = document.getElementById("userBox").value;
                 document.getElementById("userBox").value = "";
                 document.getElementById("chatLog").innerHTML += user+"<br>";
                 if (user in know) {
-                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
-                } else {
+                    if (user == "yes"){
+                        if (qn == 1){
+                            console.log(know[user]["1"])
+                            document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                        }
+                        if (qn == 2){
+                            console.log(know[user]["2"])
+                            document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                        }
+                    }
+                    else if (user == "no"){
+                        if (qn == 1){
+                            console.log(know[user]["1"])
+                            document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                            document.getElementById("userBox").style.display = "none";
+                        }
+                        if (qn == 2){
+                            console.log(know[user]["2"])
+                            document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                            document.getElementById("userBox").style.display = "none";
+                            
+                            
+                        }
+                    }
+                    else {
+                        document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                    }
+                }
+                else {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
                 }
-            } 
-        </script>
-    </head>
-    <body>
-        <p id="chatLog">- - Are you in need of immediate help? (yes/no) - -<br></p>
-        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
-    </body>
-</html>
+                if (qn < 2){
+                    qn += 1;
+                }
+                console.log(qn)
+            }
+            </script>
+        </head>
+        <body style = "background-color : #E0E6E4">
+            <div style="
+                max-width: 500px;
+                max-height: 400px;
+                overflow-y: scroll;
+                right: 400;
+                bottom: 300;
+                ">
+                <p id="chatLog">Are you in need of immediate help? (yes/no) <br></p>
+                <input
+                style="
+          color: black
+                "
+                id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}
+                ">
+                    </div>
+        </body>
+    </html>
+    
+</div>
