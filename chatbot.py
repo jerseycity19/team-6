@@ -71,10 +71,6 @@ while(flag==True):
                             switch(user_response)
                             print("Do you want to continue:")
                             repeat = input()
-                            print(repeat)
-                            #if(repeat == "no"):
-                             #   break
-                              #  print("repeat is no")
                         print("left loop")
                         flag=False
 
