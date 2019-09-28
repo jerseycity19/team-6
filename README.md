@@ -35,7 +35,7 @@ The recording below showcases a demo of the web app:
 - [x] **Google Maps** to visualize events nearby
 - [x] **Fundraising APIs**
 - [x] Ambassador Mockups
-    - [ ] Ambassador technical implementation
+- [x] Social Media Integration
 
 
 ## Roadblocks
@@ -53,4 +53,4 @@ The recording below showcases a demo of the web app:
 - Flesh out gamification
 - Maps API should link to Firebase
 - Utilize Firebase file storage for different types of media (images, videos)
-- Social Media Integration
+- Further Social Media Integration
