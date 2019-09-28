@@ -66,7 +66,11 @@ while(flag==True):
                 if(user_response=='yes' or user_response=='ya' ):
                     print("Are you inquiring about yourself?")
                     user_response = input()
-                   
+                    if(user_response=='yes' or user_response=='ya'):
+                        while(repeat!="no"):
+                            print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
+                            user_response = input()
+                            switch(user_response)
 
     else:
         flag=False
