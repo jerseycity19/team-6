@@ -2,7 +2,7 @@
     <head>
         <script>
             know = {
-                "Hello" : "Hi! Are you in need of immediate help? (yes/no)",
+                //"Hello" : "Hi! Are you in need of immediate help? (yes/no)",
                 "yes" : "Are you inquiring about yourself? (yeah/nah)",
                 "no" : "Bye! take care..",
                 "yeah" : "Choose options 1. Addiction, 2. Prevention, 3. Treatment, 4. Recovery, or more",
@@ -13,7 +13,9 @@
                 "4" : '<a href="http://www.shatterproof.org/recovery">Recovery</a>',
                 "ambassador" : '<a href="https://www.shatterproof.org/community/become-an-ambassador">Ambassador</a>',
                 "testimonials" : "testimonial link (from cyrus)",
-                "events" : "events link (from peter)"
+                "events" : "events link (from peter)",
+                "event" : "events link (from peter)",
+                "testimonial" : "testimonial link (from cyrus)"
             };
             function talk() {
                 var user = document.getElementById("userBox").value;
@@ -28,7 +30,7 @@
         </script>
     </head>
     <body>
-        <p id="chatLog">- - Type "Hello" to work - -<br></p>
+        <p id="chatLog">- - Are you in need of immediate help? (yes/no) - -<br></p>
         <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
     </body>
 </html>
