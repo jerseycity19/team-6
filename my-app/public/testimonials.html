@@ -105,6 +105,12 @@
       </div>
     </nav>
 
+    <!-- FOR FB INTEGRATION -->
+    <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+    <div id='fb-root'></div>
+    <script async defer crossorigin='anonymous' src='https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0&appId=499235243890351&autoLogAppEvents=1'></script>
+
     <div class="container text-center mt-5">
       <form onsubmit=writeUserData("0")>
         Name: <input type="text" id="form-name" />
@@ -142,7 +148,7 @@
         // console.log("\n");
 
 
-        var codeBlock = "<div class='container border border-primary'>Engagements: <div>" + value.engagements + "</div><br/>" + "Name: <div>" + value.name + "</div><br/>" + "Testimony: <div>" + value.testimony + "</div><br/>" + "Image: <div>" + value.image + "</div><br/></div>";
+        var codeBlock = "<div class='container border border-primary'>Engagements: <div>" + value.engagements + "</div><br/>" + "Name: <div>" + value.name + "</div><br/>" + "Testimony: <div>" + value.testimony + "</div><br/>" + "Image: <div>" + value.image + "</div><br/></div>" + "<br />";
 
         var d1 = document.getElementById('node-id');
         d1.insertAdjacentHTML('afterend', codeBlock);
