@@ -25,11 +25,6 @@ def greeting(sentence):
 
 ##commit 2
 
-# Generating response
-#def response(user_response):
-    #robo_response=''
-
-
 #switch function
 def switch(user_response):
     print("user response: ", user_response)
@@ -71,12 +66,22 @@ while(flag==True):
                             switch(user_response)
                             print("Do you want to continue:")
                             repeat = input()
-                            print(repeat)
-                            #if(repeat == "no"):
-                             #   break
-                              #  print("repeat is no")
-                        print("left loop")
-                        flag=False
+                            print("Would you like attend an event?")
+                            repeat = "no"
+                            extra_q = input()
+                            while (extra_q == 'yes'):
+                                print("attend an event link")
+                                print("Would you like to view testimonials?")
+                                extra_q = input()
+                                if extra_q == 'yes':
+                                    print("testimonial link")
+                                    print("Would you like to become an ambassador?")
+                                    extra_q = input()
+                                    if extra_q == 'yes':
+                                        print("ambassador signup link")
+                                        print("Would you like to restart this menu?")
+                                        extra_q = input()
+                            flag=False
 
 
     else:
