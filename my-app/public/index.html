@@ -66,6 +66,23 @@
       // call firebase here?
     </script>
 
+    <!-- inline css -->
+    <style>
+      .style0 {
+        background-attachment: fixed;
+        background-image: url("images/blur_forest.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .style1 {
+        background-attachment: fixed;
+        background-image: url("images/blur_mountains.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand" href="#">Shatterproof</a>
@@ -88,16 +105,29 @@
       </div>
     </nav>
 
-    <div id="map" style="width: 705px; height: 375px"></div>
-    <script>
-    // Create variable to hold map element, give initial settings to map
-    var map = L.map('map',{ center: [40.71455, -74.00712], zoom: 10});
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
-    var myDataPoint = L.marker([40.69245, -73.99036]).addTo(map);
-    var myDataPoint = L.marker([40.75, -73.86667]).addTo(map);
-    var myDataPoint = L.marker([40.580696, -74.15271]).addTo(map);
-    </script>
+    <!-- Jumbotron -->
+    <div class="jumbotron text-center style0 text-light rounded-0">
+      <h1 class="display-1">Shatterproof Social</h1>
+      <p class="lead">
+        END THE STIGMA
+      </p>
+      <p>
+        Together, armed with knowledge, we can change the conversation about addiction.
+      </p>
+    </div>
+
     <div id="root"></div>
+    <div class="container mb-4">
+      <div id="map" style="width: 705px; height: 375px"></div>
+      <script>
+      // Create variable to hold map element, give initial settings to map
+      var map = L.map('map',{ center: [40.71455, -74.00712], zoom: 10});
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+      var myDataPoint = L.marker([40.69245, -73.99036]).addTo(map);
+      var myDataPoint = L.marker([40.75, -73.86667]).addTo(map);
+      var myDataPoint = L.marker([40.580696, -74.15271]).addTo(map);
+      </script>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -109,16 +139,8 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-    <style>
-      .style1 {
-        background-attachment: fixed;
-        background-image: url("images/blur_mountains.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    </style>
     <!-- Call to action -->
-    <div class="jumbotron text-center style1 text-light">
+    <div class="jumbotron text-center style1 text-light rounded-0">
       <h1 class="display-4">Get connected!</h1>
       <p class="lead">Attend an event or a meetup near you.</p>
       <a class="btn btn-primary btn-lg" href="#" role="button">Find events</a>
