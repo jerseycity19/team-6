@@ -1,11 +1,18 @@
 <html>
     <head>
         <script>
+            var qn = 1;
             know = {
                 //"Hello" : "Hi! Are you in need of immediate help? (yes/no)",
-                "yes" : "Are you inquiring about yourself? (yeah/nah)",
-                "no" : "Bye! take care..",
-                "yeah" : "Choose options 1. Addiction, 2. Prevention, 3. Treatment, 4. Recovery, or more",
+                "yes" : {
+                    "1" : "Are you inquiring about yourself? (yes/no)",
+                    "2" : "Choose options 1. Addiction, 2. Prevention, 3. Treatment, 4. Recovery, or more",
+                    "3" : "Test2"
+                },
+                "no" : {
+                    "1" : "Bye! take care..",
+                    "2" : '<a href="http://www.shatterproof.org/about">Resources</a>'
+                },
                 "more" : "Would you like to see testimonials, events or ambassador?",
                 "1" : '<a href="http://www.shatterproof.org/about-addiction">Addiction</a>',
                 "2" : '<a href="http://www.shatterproof.org/prevention">Prevention</a>',
@@ -22,10 +29,23 @@
                 document.getElementById("userBox").value = "";
                 document.getElementById("chatLog").innerHTML += user+"<br>";
                 if (user in know) {
-                    document.getElementById("chatLog").innerHTML += know[user]+"<br>";
+                    if (qn == 1){
+                        console.log(know[user]["1"])
+                        document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                    }
+                    if (qn == 2){
+                        console.log(know[user]["2"])
+                        document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                    }
+                    if (qn == 3){
+                        console.log(know[user]["3"])
+                        document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                    }
                 } else {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
                 }
+                qn += 1;
+                console.log(qn)
             } 
         </script>
     </head>
