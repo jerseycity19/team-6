@@ -22,62 +22,6 @@ def greeting(sentence):
         if word.lower() in GREETING_INPUTS:
             return random.choice(GREETING_RESPONSES)
 
-
-##commit 2
-
-# Generating response
-#def response(user_response):
-    #robo_response=''
-
-
-#switch function
-def switch(user_response):
-    print("user response: ", user_response)
-    switcher = {
-        "1": "addiction link",
-        "2": "prevention link",
-        "3": "treatment link",
-        "4": "recovery link",
-    }
-    print(switcher[user_response])
-   
-
-#print switch.get(user_response, "Invalid option")
-
-
-flag=True
-repeat = "yes"
-print("Are you in need of immediate help?")
-while(flag==True):
-    user_response = input()
-    user_response=user_response.lower()
-    #to exit
-    if(user_response!='no'):
-        if(user_response=='thanks' or user_response=='thank you' ):
-            flag=False
-            print("Bye")
-        
-        else:
-            if(greeting(user_response)!=None):
-                print("Are you in need of immediate help?"+greeting(user_response))
-            else:
-                if(user_response=='yes' or user_response=='ya' ):
-                    print("Are you inquiring about yourself?")
-                    user_response = input()
-                    if(user_response=='yes' or user_response=='ya'):
-                        while(repeat=="yes"):
-                            print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
-                            user_response = input()
-                            switch(user_response)
-                            print("Do you want to continue:")
-                            repeat = input()
-                        print("left loop")
-                        flag=False
-
-
-    else:
-        flag=False
-        print("Bye! take care..")    
         
 
 
