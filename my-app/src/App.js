@@ -19,7 +19,7 @@ function App() {
     <a class="nav-link" href="#">Events</a>
     </li>
     <li class="nav-item">
-    <a class="nav-link" href="#">Testimonials</a>
+    <a class="nav-link" href="testimonials.html">Testimonials</a>
     </li>
     </ul>
     </div>
