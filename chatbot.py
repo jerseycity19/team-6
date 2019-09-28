@@ -25,11 +25,6 @@ def greeting(sentence):
 
 ##commit 2
 
-# Generating response
-#def response(user_response):
-    #robo_response=''
-
-
 #switch function
 def switch(user_response):
     print("user response: ", user_response)
@@ -69,10 +64,22 @@ while(flag==True):
                             print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
                             user_response = input()
                             switch(user_response)
-                            print("Do you want to continue inquiring (1,2,3,4)?:")
-                            inquire = input()
-                            if (inquire=="no"):
-                                print("Would you like attend an event?")
+                            print("Do you want to continue:")
+                            repeat = input()
+                            print("Would you like attend an event?")
+                            extra_q = input()
+                            while (extra_q == 'yes'):
+                                print("attend an event link")
+                                print("Would you like to view testimonials?")
+                                extra_q = input()
+                                if extra_q == 'yes':
+                                    print("testimonial link")
+                                    print("Would you like to become an ambassador?")
+                                    extra_q = input()
+                                    if extra_q == 'yes':
+                                        print("ambassador signup link")
+                                        print("Would you like to restart this menu?")
+                                        extra_q = input()
                             flag=False
 
 
