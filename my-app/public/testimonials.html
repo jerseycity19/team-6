@@ -117,5 +117,39 @@
         <button class="btn btn-primary" type="submit">Button</button>
       </form>
     </div>
+
+    <div id="node-id">
+    </div>
+
+    <script>
+    // // call firebase here?
+    var testimonialsRef = db.ref().child('tables/testimonials');
+    testimonialsRef.on("value", function(snapshot) {
+      // console.log(snapshot.val());
+
+      snapshot.forEach(function(snapshotRef) {
+        var value = snapshotRef.val();
+        // var formattedValue = (
+        //   <div>
+        //     <p>value.name</p>
+        //     <p>value.referral</p>
+        //   </div>
+        // );
+        // console.log(value.engagements + "\n");
+        // console.log(value.name + "\n");
+        // console.log(value.testimony + "\n");
+        // console.log(value.image + "\n");
+        // console.log("\n");
+
+
+        var codeBlock = "<div class='container border border-primary'>Engagements: <div>" + value.engagements + "</div><br/>" + "Name: <div>" + value.name + "</div><br/>" + "Testimony: <div>" + value.testimony + "</div><br/>" + "Image: <div>" + value.image + "</div><br/></div>";
+
+        var d1 = document.getElementById('node-id');
+        d1.insertAdjacentHTML('afterend', codeBlock);
+      });
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+    </script>
   </body>
 </html>
