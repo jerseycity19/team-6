@@ -10,7 +10,7 @@
                 },
                 "no" : {
                     "1" : "Bye! take care..",
-                    "2" : '<a href="http://www.shatterproof.org/about">Resources</a>'
+                    "2" : '<a href="http://www.shatterproof.org/about">Resources</a>',
                 },
                 "5" : "Would you like to see testimonials, events or ambassador?",
                 "1" : '<a href="http://www.shatterproof.org/about-addiction">Addiction</a>',
@@ -30,7 +30,7 @@
             document.getElementById("userBox").value = "";
             document.getElementById("chatLog").innerHTML += user+"<br>";
             if (user in know) {
-                if ((user == "yes") || (user == "no")){
+                if (user == "yes"){
                     if (qn == 1){
                         console.log(know[user]["1"])
                         document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
@@ -38,6 +38,20 @@
                     if (qn == 2){
                         console.log(know[user]["2"])
                         document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                    }
+                }
+                else if (user == "no"){
+                    if (qn == 1){
+                        console.log(know[user]["1"])
+                        document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                        document.getElementById("userBox").style.display = "none";
+                    }
+                    if (qn == 2){
+                        console.log(know[user]["2"])
+                        document.getElementById("chatLog").innerHTML += know[user][qn.toString()]+"<br>";
+                        document.getElementById("userBox").style.display = "none";
+
+                        
                     }
                 }
                 else {
@@ -66,6 +80,6 @@
             ">
             <p id="chatLog">- - Are you in need of immediate help? (yes/no) - -<br></p>
             <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
-                </div>
+        </div>
     </body>
 </html>
