@@ -2,9 +2,14 @@
     <head>
         <script>
             know = {
-                "hello" : "hi",
-                "how are you?" : "good",
-                "ok" : ":)"
+                "Hello" : "Hi! Are you in need of immediate help? (yes/no)",
+                "yes" : "Are you inquiring about yourself? (yeah/nah)",
+                "no" : "Bye! take care..",
+                "yeah" : "Choose options 1. Addiction, 2. Prevention, 3. Treatment, 4. Recovery",
+                "1" : '<a href="http://www.shatterproof.org/about-addiction">Addiction</a>',
+                "2" : '<a href="http://www.shatterproof.org/prevention">Prevention</a>',
+                "3" : '<a href="http://www.shatterproof.org/treatment">Treatment</a>',
+                "4" : '<a href="http://www.shatterproof.org/recovery">Recovery</a>'
             };
             function talk() {
                 var user = document.getElementById("userBox").value;
@@ -19,7 +24,7 @@
         </script>
     </head>
     <body>
-        <p id="chatLog">- - C H A T - -<br></p>
+        <p id="chatLog">- - Type "Hello" to work - -<br></p>
         <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
     </body>
 </html>
