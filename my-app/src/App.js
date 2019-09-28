@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
     <nav class="navbar navbar-expand-md navbar-dark bg-success">
-    <a class="navbar-brand" href="#">Shatterproof</a>
+    <a class="navbar-brand" href="index.html">Shatterproof</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -13,7 +13,7 @@ function App() {
     <div class="collapse navbar-collapse" id="navbarToggler">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
     <li class="nav-item active">
-    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
     <a class="nav-link" href="#">Events</a>
