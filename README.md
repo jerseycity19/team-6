@@ -35,6 +35,8 @@ The recording below showcases a demo of the web app:
 - [ ] **Google Maps** to visualize events nearby
 - [ ] Create/Read/Update/Delete **testimonials**
 - [ ] IBM Watson **sentiment Analysis** (Content filtering for Testimonials)
+- [ ] **Fundraising APIs**
+- [ ] Ambassador
 
 
 ## Roadblocks
