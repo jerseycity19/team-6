@@ -54,6 +54,12 @@ while(flag==True):
     user_response = input()
     user_response=user_response.lower()
     #to exit
+    if(user_response!='no'):
+        if(user_response=='thanks' or user_response=='thank you' ):
+            flag=False
+            print("Bye")
+        
+       
 
     else:
         flag=False
