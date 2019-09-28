@@ -91,8 +91,11 @@
     <div id="map" style="width: 705px; height: 375px"></div>
     <script>
     // Create variable to hold map element, give initial settings to map
-    var map = L.map('map',{ center: [42.362432, -71.086086], zoom: 14});
+    var map = L.map('map',{ center: [40.71455, -74.00712], zoom: 10});
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+    var myDataPoint = L.marker([40.69245, -73.99036]).addTo(map);
+    var myDataPoint = L.marker([40.75, -73.86667]).addTo(map);
+    var myDataPoint = L.marker([40.580696, -74.15271]).addTo(map);
     </script>
     <div id="root"></div>
     <!--
