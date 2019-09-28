@@ -24,10 +24,76 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <!-- BOOTSTRAP CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+    <!-- Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      // TODO: Hide this from git
+      var firebaseConfig = {
+        apiKey: "AIzaSyBgpM5QEZRAXnN4sVnQIdZ99GMt9VeJXuw",
+        authDomain: "cfg-team6-shatterproof.firebaseapp.com",
+        databaseURL: "https://cfg-team6-shatterproof.firebaseio.com",
+        projectId: "cfg-team6-shatterproof",
+        storageBucket: "",
+        messagingSenderId: "726889625064",
+        appId: "1:726889625064:web:c0b3e2b00e6825085f205d"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // call firebase here?
+    </script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Shatterproof</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarToggler">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Testimonials</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="map" style="width: 705px; height: 375px"></div>
+    <script>
+    // Create variable to hold map element, give initial settings to map
+    var map = L.map('map',{ center: [42.362432, -71.086086], zoom: 14});
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', { attribution: '© OpenStreetMap' }).addTo(map);
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -40,25 +106,20 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <style>
+      .style1 {
+        background-attachment: fixed;
+        background-image: url("images/sunset.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+    <!-- Call to action -->
+    <div class="jumbotron text-center style1">
+      <h1 class="display-4">Get connected!</h1>
+      <p class="lead">Attend an event or a meetup near you.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Find events</a>
+    </div>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
-
-    <script>
-      // Your web app's Firebase configuration
-      var firebaseConfig = {
-        apiKey: "AIzaSyBgpM5QEZRAXnN4sVnQIdZ99GMt9VeJXuw",
-        authDomain: "cfg-team6-shatterproof.firebaseapp.com",
-        databaseURL: "https://cfg-team6-shatterproof.firebaseio.com",
-        projectId: "cfg-team6-shatterproof",
-        storageBucket: "",
-        messagingSenderId: "726889625064",
-        appId: "1:726889625064:web:c0b3e2b00e6825085f205d"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
   </body>
 </html>
