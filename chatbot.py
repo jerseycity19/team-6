@@ -3,14 +3,14 @@ import io
 import random
 import string # to process standard python strings
 import warnings
-import numpy as np
+#import numpy as np
 #from sklearn.feature_extraction.text import TfidfVectorizer
 #from sklearn.metrics.pairwise import cosine_similarity
 import warnings
 warnings.filterwarnings('ignore')
 
-import nltk
-from nltk.stem import WordNetLemmatizer
+#import nltk
+#from nltk.stem import WordNetLemmatizer
 
 # Keyword Matching
 GREETING_INPUTS = ("hello")
@@ -26,8 +26,8 @@ def greeting(sentence):
 ##commit 2
 
 # Generating response
-def response(user_response):
-    robo_response=''
+#def response(user_response):
+    #robo_response=''
 
 
 #switch function
@@ -40,9 +40,7 @@ def switch(user_response):
         "4": "recovery link",
     }
     print(switcher[user_response])
-    print("Do you want to continue:")
-    repeat = input()
-    print(repeat)
+   
 
 #print switch.get(user_response, "Invalid option")
 
@@ -67,10 +65,19 @@ while(flag==True):
                     print("Are you inquiring about yourself?")
                     user_response = input()
                     if(user_response=='yes' or user_response=='ya'):
-                        while(repeat!="no"):
+                        while(repeat=="yes"):
                             print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
                             user_response = input()
                             switch(user_response)
+                            print("Do you want to continue:")
+                            repeat = input()
+                            print(repeat)
+                            #if(repeat == "no"):
+                             #   break
+                              #  print("repeat is no")
+                        print("left loop")
+                        flag=False
+
 
     else:
         flag=False
