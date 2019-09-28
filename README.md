@@ -8,7 +8,7 @@
   - HTML/CSS
 - React
   - Javascript
-  
+
 **Back-end**
 - Google Maps API
 - GoFundMe API
@@ -28,12 +28,13 @@ The recording below showcases a demo of the web app:
 
 <br />
 
-## User Stories
-- [ ] User Story 1
-- [ ] User Story 2
-- [ ] User Story 3
-- [ ] User Story 4
-- [ ] User Story 5
+## Features
+- [ ] Web app should allow users to **Create/Delete events**
+- [ ] Web app should allow users to **Lookup/RSVP to events**
+- [ ] **Chatbot** functionality
+- [ ] **Google Maps** to visualize events nearby
+- [ ] Create/Read/Update/Delete **testimonials**
+- [ ] IBM Watson **sentiment Analysis** (Content filtering for Testimonials)
 
 
 ## Roadblocks
