@@ -39,53 +39,58 @@ def switch(user_response):
 
 #print switch.get(user_response, "Invalid option")
 
-
-flag=True
-repeat = "yes"
-print("Are you in need of immediate help?")
-while(flag==True):
-    user_response = input()
-    user_response=user_response.lower()
-    #to exit
-    if(user_response!='no'):
-        if(user_response=='thanks' or user_response=='thank you' ):
-            flag=False
-            print("Bye")
+def chatbot():
+    flag=True
+    repeat = "yes"
+    print("Are you in need of immediate help?")
+    while(flag==True):
+        user_response = input()
+        user_response=user_response.lower()
+        #to exit
+        if(user_response!='no'):
+            if(user_response=='thanks' or user_response=='thank you' ):
+                flag=False
+                print("Bye")
         
-        else:
-            if(greeting(user_response)!=None):
-                print("Are you in need of immediate help?"+greeting(user_response))
             else:
-                if(user_response=='yes' or user_response=='ya' ):
-                    print("Are you inquiring about yourself?")
-                    user_response = input()
-                    if(user_response=='yes' or user_response=='ya'):
-                        while(repeat=="yes"):
-                            print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
-                            user_response = input()
-                            switch(user_response)
-                            print("Do you want to continue:")
-                            repeat = input()
-                            print("Would you like attend an event?")
-                            extra_q = input()
-                            while (extra_q == 'yes'):
-                                print("attend an event link")
-                                print("Would you like to view testimonials?")
+                if(greeting(user_response)!=None):
+                    print("Are you in need of immediate help?"+greeting(user_response))
+                else:
+                    if(user_response=='yes' or user_response=='ya' ):
+                        print("Are you inquiring about yourself?")
+                        user_response = input()
+                        if(user_response=='yes' or user_response=='ya'):
+                            while(repeat=="yes"):
+                                print("Choose options 1,2,3,4:\n1.Addicion\n2.Prevention\n3.Treatment\n4.Recovery")
+                                user_response = input()
+                                switch(user_response)
+                                print("Do you want to continue:")
+                                repeat = input()
+                                print("Would you like attend an event?")
+                                repeat = "no"
                                 extra_q = input()
-                                if extra_q == 'yes':
-                                    print("testimonial link")
-                                    print("Would you like to become an ambassador?")
+                                while (extra_q == 'yes'):
+                                    print("attend an event link")
+                                    print("Would you like to view testimonials?")
                                     extra_q = input()
                                     if extra_q == 'yes':
-                                        print("ambassador signup link")
-                                        print("Would you like to restart this menu?")
+                                        print("testimonial link")
+                                        print("Would you like to become an ambassador?")
                                         extra_q = input()
-                            flag=False
+                                        if (extra_q == 'yes'):
+                                            print("ambassador signup link")
+                                            print("Would you like to restart this menu?")
+                                            extra_q = input()
+                                                if extra_q == "yes":
+                                                    chatbot()
+                                flag=False
 
 
-    else:
-        flag=False
-        print("Bye! take care..")    
-        
+        else:
+            flag=False
+            print("Bye! take care..")
+
+
+chatbot()
 
 
