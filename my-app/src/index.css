@@ -7,8 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #map {
-  height: 180px;
-  
+  margin:auto;
+  width: 705px;
+  height: 375px
  }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
