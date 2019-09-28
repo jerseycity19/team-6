@@ -53,7 +53,15 @@
         </script>
     </head>
     <body>
-        <div>
+        <div style="
+            max-width: 300px;
+            max-height: 200px;
+            position: absolute;
+            overflow-y: scroll;
+            right: 550;
+            bottom: 300;
+            z-index: 1000;
+        ">
             <p id="chatLog">- - Are you in need of immediate help? (yes/no) - -<br></p>
             <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
         </div>
