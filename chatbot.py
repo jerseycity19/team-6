@@ -59,8 +59,10 @@ while(flag==True):
             flag=False
             print("Bye")
         
-       
-
+        else:
+            if(greeting(user_response)!=None):
+                print("Are you in need of immediate help?"+greeting(user_response))
+            
     else:
         flag=False
         print("ROBO: Bye! take care..")    
